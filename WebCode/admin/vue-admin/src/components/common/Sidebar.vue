@@ -33,7 +33,7 @@
                             <el-menu-item
                                 v-else
                                 :index="subItem.index"
-                                :key="subItem.index"
+                                :key="subItem.index" 
                             >{{ subItem.title }}</el-menu-item>
                         </template>
                     </el-submenu>
@@ -63,93 +63,285 @@ export default {
                 },
                 {
                     icon: 'el-icon-lx-cascades',
-                    index: 'table',
-                    title: '基础表格'
-                },
-                {
-                    icon: 'el-icon-lx-copy',
-                    index: 'tabs',
-                    title: 'tab选项卡'
-                },
-                {
-                    icon: 'el-icon-lx-calendar',
-                    index: '3',
-                    title: '表单相关',
+                    index: '1',
+                    title: '系统管理',
                     subs: [
                         {
-                            index: 'form',
-                            title: '基本表单'
-                        },
-                        {
-                            index: '3-2',
-                            title: '三级菜单',
+                            index: '1-1',
+                            title: '用户管理',
                             subs: [
                                 {
                                     index: 'editor',
-                                    title: '富文本编辑器'
+                                    title: '管理用户'
                                 },
                                 {
                                     index: 'markdown',
-                                    title: 'markdown编辑器'
+                                    title: '学生用户'
                                 }
                             ]
                         },
                         {
-                            index: 'upload',
-                            title: '文件上传'
+                            index: 'markdown',
+                            title: '系统配置'
                         }
                     ]
                 },
                 {
-                    icon: 'el-icon-lx-emoji',
-                    index: 'icon',
-                    title: '自定义图标'
+                    icon: 'el-icon-lx-copy',
+                    index: '2',
+                    title: '校区管理',
+                    subs: [
+                        {
+                            index: 'editor',
+                            title: '校区列表'
+                        },
+                        {
+                            index: 'editor',
+                            title: '角色列表'
+                        },
+                        {
+                            index: 'editor',
+                            title: '权限列表'
+                        }
+                    ]
                 },
                 {
-                    icon: 'el-icon-pie-chart',
-                    index: 'charts',
-                    title: 'schart图表'
+                    icon: 'el-icon-lx-copy',
+                    index: '3',
+                    title: '班级管理',
+                    subs: [
+                        {
+                            index: 'editor',
+                            title: '班级列表'
+                        },
+                        {
+                            index: 'editor',
+                            title: '班级详情'
+                        }
+                    ]
                 },
                 {
-                    icon: 'el-icon-rank',
+                    icon: 'el-icon-lx-copy',
+                    index: '4',
+                    title: '科目管理',
+                    subs: [
+                        {
+                            index: 'editor',
+                            title: '科目列表'
+                        },
+                        {
+                            index: 'editor',
+                            title: '科目详情'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '5',
+                    title: '题库管理',
+                    subs: [
+                        {
+                            index: 'editor',
+                            title: '题目列表'
+                        },
+                        {
+                            index: 'editor',
+                            title: '题目导入'
+                        },
+                        {
+                            index: '5-3',
+                            title: '题目创建',
+                            subs: [
+                                {
+                                    index: 'editor',
+                                    title: '单选题'
+                                },
+                                {
+                                    index: 'markdown',
+                                    title: '多选题'
+                                },
+                                {
+                                    index: 'markdown',
+                                    title: '判断题'
+                                },
+                                {
+                                    index: 'markdown',
+                                    title: '填空题'
+                                },
+                                {
+                                    index: 'markdown',
+                                    title: '简答题'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
                     index: '6',
-                    title: '拖拽组件',
+                    title: '卷库管理',
                     subs: [
                         {
-                            index: 'drag',
-                            title: '拖拽列表'
+                            index: 'editor',
+                            title: '试卷列表'
                         },
                         {
-                            index: 'dialog',
-                            title: '拖拽弹框'
+                            index: 'editor',
+                            title: '人工组卷'
+                        },
+                        {
+                            index: 'editor',
+                            title: '智能组卷'
                         }
                     ]
                 },
                 {
-                    icon: 'el-icon-lx-global',
-                    index: 'i18n',
-                    title: '国际化功能'
-                },
-                {
-                    icon: 'el-icon-lx-warn',
+                    icon: 'el-icon-lx-copy',
                     index: '7',
-                    title: '错误处理',
+                    title: '答卷管理',
                     subs: [
                         {
-                            index: 'permission',
-                            title: '权限测试'
+                            index: 'editor',
+                            title: '试卷列表'
                         },
                         {
-                            index: '404',
-                            title: '404页面'
+                            index: 'editor',
+                            title: '试卷分析'
                         }
                     ]
                 },
                 {
-                    icon: 'el-icon-lx-redpacket_fill',
-                    index: '/donate',
-                    title: '支持作者'
-                }
+                    icon: 'el-icon-lx-copy',
+                    index: '8',
+                    title: '作业管理',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '作业列表'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '发布作业'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '9',
+                    title: '知识库管理',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '文档列表'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '文档上传'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '10',
+                    title: '课程学习',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '课程列表'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '课程分析'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '课程评论'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '课程订单'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '11',
+                    title: '报表中心',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '年纪统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '学科统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '班级统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '题目统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '试卷统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '课程统计'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '知识库统计'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '12',
+                    title: '消息管理',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '消息列表'
+                        },{
+                            index: 'tabs',
+                            title: '消息发送'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '13',
+                    title: '日志管理',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '日志列表'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-copy',
+                    index: '14',
+                    title: '个人中心',
+                    subs: [
+                        {
+                            index: 'tabs',
+                            title: '个人资料'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '操作记录'
+                        },
+                        {
+                            index: 'tabs',
+                            title: '修改资料'
+                        }
+                    ]
+                },
             ]
         };
     },
